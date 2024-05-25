@@ -5,10 +5,109 @@
     <meta charset="utf-8">
 </head>
 
+<style>
+
+#data-table {
+     margin: 0px 0;
+     padding-left: 2px;
+     width: 150px;
+}
+
+
+    #data-table th {
+        text-align: left;
+    }
+     #data-table td {
+        min-width: 16px;
+    }
+
+  #data-table td img {
+    display: block;
+    width: 16px;
+    height: 16px;
+}
+
+    #data-table td:first-child {
+    max-width: 72px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    }
+
+/* .status-CRITICAL,
+.status-DOWN {
+    background-image: url("../icons/status_red32x32.png");
+    color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    max-width: 50%;
+    max-height: 50%;
+}
+
+.status-WARNING {
+    background-image: url("../icons/status_yellow32x32.png");
+    color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+      max-width: 50%;
+    max-height: 50%;
+}
+
+.status-UP {
+    background-image: url("../icons/status_green32x32.png");
+    color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+      max-width: 50%;
+    max-height: 50%;
+}
+
+.status-UNKNOWN {
+    background-image: url("../icons/status_unkown32x32.png");
+    color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+      max-width: 50%;
+    max-height: 50%;
+} */
+
+    body {
+        background-color: black;
+        color: white; /* Set the default text color to white for better visibility */
+    }
+
+     a {
+        color: white;
+    
+    }
+
+    h4 {
+        margin: 0;
+        padding: 0;
+        padding-left: 5px;
+        font-size: 1.2em;
+        font-weight: bold;
+    }
+
+
+</style>
+
 <body>
-    <div style="width:180px;">Ezmon for Nordlo
-        <br><a href="options.html">Options</a> | <a href="https://zmon.zetup.se/main.php" target="_blank">Zmon</a> | <span id="version"></span></div>
-    <script src="js/common.js"></script>
+   
+    <h4>Checkmk</h4>
+
+    <table id="data-table">
+        <!-- Table will be generated here -->
+    </table>
+
+    <div id="status-message" style="padding-left: 5px; margin-top: 5px;"></div>
+
+        <div style="min-width: 110px; margin: 5px; padding: 10px 0;">
+            <a href="options.html">Options</a> | <a href="https://server/" target="_blank">Server</a>
+        </div>
+    
+    <script src="/js/common.js"></script>
+    <script src="/js/popup.js"></script>
 </body>
 
 </html>
